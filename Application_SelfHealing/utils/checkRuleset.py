@@ -1,4 +1,6 @@
 import pandas as pd
+from .config.params import config as param
+config = param()
 
 class check_rule_set:
 
@@ -7,7 +9,7 @@ class check_rule_set:
         self.code = code
 
     def check_ruleset(self):
-        rule_file_path = r"C:\Users\noejoseph\Documents\PythonProjects\RuleSet.csv"
+        rule_file_path = config['rule_set_file']
         pdata = pd.read_csv(rule_file_path)
         pdata = pdata[(pdata['JobName'] == self.job_name) & (pdata['SelfHeal_Flag'] == 'Yes') & (pdata['ErrorCode'] == self.code)]
 
