@@ -1,4 +1,5 @@
 import pandas as pd
+import utils.emailnotifier as emailer
 from .config.params import config as param
 config = param()
 
@@ -24,4 +25,5 @@ class check_rule_set:
 
             elif self_heal_step == 'Email Notification':
                 print('Email Notification')
-                #Invoke the email notification functionality here
+                emailer.init_mail()
+                print('Mail Triggered')

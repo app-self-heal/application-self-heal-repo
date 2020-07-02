@@ -9,17 +9,21 @@ class log_file_parser:
 
     def log_file_parser_informatica():
         log_file_path = config['log_file_path']
-        regex_error_code = '(ERROR(.*))'
+        regex_error_code = '(ORA(.*):)'
+        regex_session_name = '(ERROR(.*))'
         with open(log_file_path, "r") as file:
             for line in file:
-                for match in re.finditer(regex_error_code, line, re.S):
+                for match in re.finditer(regex_session_name, line, re.S):
                     match_text = match.group()
                     result = re.search('Session task instance (.*) :',match_text)
                     session_name = result.group(1).replace(']','').replace('[','')
-                    result = re.search('exited with error(.*)',line)
-                    error_code = result.group(1).replace(']','').replace('[','')
+
+                for match in re.finditer(regex_error_code, line, re.S):
+                    match_text = match.group()
+                    result = re.search('(.*):',match_text).group(1)
+                    error_code = result
 
         return {
         'job': session_name.rstrip('\n'),
-        'code': int(error_code.rstrip('\n'))
+        'code': error_code.rstrip('\n')
         }
