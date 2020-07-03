@@ -13,17 +13,28 @@ class check_rule_set:
         rule_file_path = config['rule_set_file']
         pdata = pd.read_csv(rule_file_path)
         pdata = pdata[(pdata['JobName'] == self.job_name) & (pdata['SelfHeal_Flag'] == 'Yes') & (pdata['ErrorCode'] == self.code)]
-
+        platform = pdata[['Platform']]
         pdata = pdata[['SelfHeal_Steps']]
         if pdata.empty :
             print('No rules specifies for this ruleset')
+            rule_flag = 'false'
+            platform = 'NA'
+            self_heal_step = 'Self Healing Action Not Specified'
         else:
+            rule_flag = 'true'
             self_heal_step = pdata.iat[0,0]
+            platform = platform.iat[0,0]
 
             if self_heal_step == 'Re-run Job':
                 print('re-run job')
 
             elif self_heal_step == 'Email Notification':
                 print('Email Notification')
-                emailer.init_mail()
+                emailer.init_mail(self.job_name, self.code, platform)
                 print('Mail Triggered')
+
+        return {
+        "rule_flag": rule_flag,
+        "platform": platform,
+        "action_taken": self_heal_step
+        }
