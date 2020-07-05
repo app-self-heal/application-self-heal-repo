@@ -1,3 +1,30 @@
 Platform,JobName,ErrorCode,Failure_Date_Time,Action_Taken,SelfHeal_Start_Date_Time
 Informatica,s_m_jtx_hier_useCase,ORA-01400,Mon Apr 03 15:10:22 2006,Email Notification, July 03 09:53:48 2020
 Informatica,s_m_jtx_hier_useCase,ORA-01400,Mon Apr 03 15:10:22 2006,Email Notification, July 03 09:54:05 2020
+Informatica,s_m_jtx_hier_useCase,ORA-01400,Mon Apr 03 15:10:22 2006,Email Notification, July 03 21:47:22 2020
+Informatica,s_m_jtx_hier_useCase,ORA-01400,Mon Apr 03 15:10:22 2006,Email Notification, July 03 21:47:33 2020
+Informatica,s_m_jtx_hier_useCase,ORA-01400,Mon Apr 03 15:10:22 2006,Email Notification, July 03 21:47:44 2020
+Informatica,s_m_jtx_hier_useCase,ORA-01400,Mon Apr 03 15:10:22 2006,Email Notification, July 04 15:40:31 2020
+Informatica,s_m_jtx_hier_useCase,ORA-01400,Mon Apr 03 15:10:22 2006,Email Notification, July 04 15:40:43 2020
+Informatica,s_m_jtx_hier_useCase,ORA-01400,Mon Apr 03 15:10:22 2006,Email Notification, July 04 15:40:55 2020
+Informatica,s_m_jtx_hier_useCase,ORA-01400,Mon Apr 03 15:10:22 2006,Email Notification, July 04 15:49:19 2020
+Informatica,s_m_jtx_hier_useCase,ORA-01400,Mon Apr 03 15:10:22 2006,Email Notification, July 04 15:49:29 2020
+Informatica,s_m_jtx_hier_useCase,ORA-01400,Mon Apr 03 15:10:22 2006,Email Notification, July 04 15:52:11 2020
+Informatica,s_m_jtx_hier_useCase,ORA-01400,Mon Apr 03 15:10:22 2006,Email Notification, July 04 15:52:22 2020
+Informatica,s_m_jtx_hier_useCase,ORA-01400,Mon Apr 03 15:10:22 2006,Email Notification, July 04 15:54:40 2020
+Informatica,s_m_jtx_hier_useCase,ORA-01400,Mon Apr 03 15:10:22 2006,Email Notification, July 04 15:54:58 2020
+Informatica,s_m_jtx_hier_useCase,"['ORA-01400', 'WRT_8047']",Mon Apr 03 15:10:22 2006,Email Notification, July 04 19:42:19 2020
+Informatica,s_m_jtx_hier_useCase2,['RR_4035'],Wed Jun 07 16:10:20 2010,Email Notification, July 04 19:42:30 2020
+Informatica,s_m_jtx_hier_useCase1,['WRT_8098'],Mon Apr 03 15:10:22 2006,Email Notification, July 04 19:42:42 2020
+Informatica,s_m_jtx_hier_useCase,"['ORA-01400', 'WRT_8047']",Mon Apr 03 15:10:22 2006,Email Notification, July 05 09:31:58 2020
+Informatica,s_m_jtx_hier_useCase2,['RR_4035'],Wed Jun 07 16:10:20 2010,Email Notification, July 05 09:32:01 2020
+Informatica,s_m_jtx_hier_useCase1,['WRT_8098'],Mon Apr 03 15:10:22 2006,Email Notification, July 05 09:32:04 2020
+NA,s_m_jtx_hier_useCase3 : ERROR : SIP-40203,[],Mon Apr 03 15:10:22 2006,Self Healing Action Not Specified,NA
+Informatica,s_m_jtx_hier_useCase,"['ORA-01400', 'WRT_8047']",Mon Apr 03 15:10:22 2006,Email Notification, July 05 09:50:54 2020
+Informatica,s_m_jtx_hier_useCase2,['RR_4035'],Wed Jun 07 16:10:20 2010,Email Notification, July 05 09:50:56 2020
+Informatica,s_m_jtx_hier_useCase1,['WRT_8098'],Mon Apr 03 15:10:22 2006,Email Notification, July 05 09:50:59 2020
+Informatica,s_m_jtx_hier_useCase3,['SIP-40203'],Mon Apr 20 15:10:22 2006,Re-run Job, July 05 09:50:59 2020
+Informatica,s_m_jtx_hier_useCase,"['ORA-01400', 'WRT_8047']",Mon Apr 03 15:10:22 2006,Email Notification, July 05 09:57:43 2020
+Informatica,s_m_jtx_hier_useCase2,['RR_4035'],Wed Jun 07 16:10:20 2010,Email Notification, July 05 09:57:46 2020
+Informatica,s_m_jtx_hier_useCase1,['WRT_8098'],Mon Apr 03 15:10:22 2006,Email Notification, July 05 09:57:48 2020
+Informatica,s_m_jtx_hier_useCase3,['SIP-40203'],Mon Apr 20 15:10:22 2006,Re-run Job, July 05 09:57:48 2020

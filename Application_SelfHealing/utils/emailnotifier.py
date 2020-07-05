@@ -11,12 +11,15 @@ email_user = 'DISHapi@outlook.com'
 email_password = '-PL,0OKM-PL,'
 email_send = config['recepient_enail']
 
-def init_mail(job_name, code, platform):
-    subject = f'Attention : Job {job_name} failed with code {code}'
+def init_mail(job_name, codes, platform):
+    code_string = ''
+    subject = f'Attention : Job {job_name} failed with code {codes}'
     msg = MIMEMultipart()
     msg['From'] = email_user
     msg['To'] = email_send
     msg['Subject'] = subject
+    for code in codes:
+        code_string = code_string + code + '<br>'
     body = f"""<p1>Hi Team,
 <br>Please find the details of the job failure below
 <br>
@@ -41,10 +44,11 @@ def init_mail(job_name, code, platform):
    <TR ALIGN="">
       <TD>{platform}</TD>
       <TD>{job_name}</TD>
-      <TD>{code}</TD>
+      <TD>{code_string}</TD>
       <TD>Please rectify and reply back with subject: <br>[RERUN]|{job_name}</TD>
    </TR>
 </TABLE>"""
+
     msg.attach(MIMEText(body,'html'))
     text = msg.as_string()
     server = smtplib.SMTP('outlook.office365.com',587)

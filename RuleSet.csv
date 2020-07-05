@@ -1,7 +1,7 @@
 Platform,JobName,ErrorCode,SelfHeal_Flag,SelfHeal_Steps
 Informatica,s_read_from_source,ORA-01409,Yes,Re-run Job
-Informatica,s_read_from_source,ORA-01406,Yes,Email Notification
-Informatica,s_aggregate_stage_table,ORA-01404,No,
-Informatica,s_aggregate_stage_table,ORA-01403,No,
-Informatica,s_load_target_table,ORA-01402,Yes,Re-run Job
 Informatica,s_m_jtx_hier_useCase,ORA-01400,Yes,Email Notification
+Informatica,s_m_jtx_hier_useCase2,RR_4035,Yes,Email Notification
+Informatica,s_m_jtx_hier_useCase,WRT_8047,Yes,Email Notification
+Informatica,s_m_jtx_hier_useCase1,WRT_8098,Yes,Email Notification
+Informatica,s_m_jtx_hier_useCase3,SIP-40203,Yes,Re-run Job
