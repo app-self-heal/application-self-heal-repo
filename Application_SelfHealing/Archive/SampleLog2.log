@@ -1,0 +1,13 @@
+INFO : LM_36435 [Wed Jun 07 16:10:20 2010] : (3060|3184) Starting execution of workflow [Wk_Java] in folder [EmployeeData] last saved by user [ellen].
+INFO : LM_36330 [Wed Jun 07 16:10:20 2010] : (3060|3184) Start task instance [Start]: Execution started.
+INFO : LM_36318 [Wed Jun 07 16:10:20 2010] : (3060|3184) Start task instance [Start]: Execution succeeded.
+INFO : LM_36505 : (3060|3184) Link [Start --> s_m_jtx_hier_useCase]: empty expression string, evaluated to TRUE.
+INFO : LM_36388 [Wed Jun 07 16:10:20 2010] : (3060|3184) Session task instance [s_m_jtx_hier_useCase2] is waiting to be started.
+INFO : LM_36682 [Wed Jun 07 16:10:20 2010] : (3060|3184) Session task instance [s_m_jtx_hier_useCase2]: started a process with pid [148] on node [garnet].
+INFO : LM_36330 [Wed Jun 07 16:10:20 2010] : (3060|3184) Session task instance [s_m_jtx_hier_useCase2]: Execution started.
+INFO : LM_36488 [Wed Jun 07 16:10:20 2010] : (3060|3180) Session task instance [s_m_jtx_hier_useCase2] : [TM_6793 Fetching initialization properties from the Integration Service. : (Mon Apr 03 15:10:21 2006)]
+INFO : LM_36488 [Wed Jun 07 16:10:20 2010] : (3060|3180) Session task instance [s_m_jtx_hier_useCase2] : [DISP_20305 The [Preparer] DTM with process id [148] is running on node [garnet].
+: (Wed Jun 07 16:10:20 2010)]
+INFO : LM_36488 [Wed Jun 07 16:10:20 2010] : (3060|3180) Session task instance [s_m_jtx_hier_useCase2] : [PETL_24036 Beginning the prepare phase for the session.]
+INFO : LM_36488 [Wed Jun 07 16:10:20 2010] : (3060|3180) Session task instance [s_m_jtx_hier_useCase2] : [TM_6721 Started [Connect to Repository].]
+ERROR : LM_36565 [Wed Jun 07 16:10:20 2010] : (3060|3180) Session task instance [s_m_jtx_hier_useCase2] : RR_4035: SQL Error [FnName: Execute -- [Teradata][ODBC Teradata Driver][Teradata Database] No more spool space in username.].

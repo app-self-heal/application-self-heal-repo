@@ -1,0 +1,13 @@
+INFO : LM_36435 [Mon Apr 03 15:10:20 2006] : (3060|3184) Starting execution of workflow [Wk_Java] in folder [EmployeeData] last saved by user [ellen].
+INFO : LM_36330 [Mon Apr 03 15:10:20 2006] : (3060|3184) Start task instance [Start]: Execution started.
+INFO : LM_36318 [Mon Apr 03 15:10:20 2006] : (3060|3184) Start task instance [Start]: Execution succeeded.
+INFO : LM_36505 : (3060|3184) Link [Start --> s_m_jtx_hier_useCase]: empty expression string, evaluated to TRUE.
+INFO : LM_36388 [Mon Apr 03 15:10:20 2006] : (3060|3184) Session task instance [s_m_jtx_hier_useCase1] is waiting to be started.
+INFO : LM_36682 [Mon Apr 03 15:10:20 2006] : (3060|3184) Session task instance [s_m_jtx_hier_useCase1]: started a process with pid [148] on node [garnet].
+INFO : LM_36330 [Mon Apr 03 15:10:20 2006] : (3060|3184) Session task instance [s_m_jtx_hier_useCase1]: Execution started.
+INFO : LM_36488 [Mon Apr 03 15:10:22 2006] : (3060|3180) Session task instance [s_m_jtx_hier_useCase1] : [TM_6793 Fetching initialization properties from the Integration Service. : (Mon Apr 03 15:10:21 2006)]
+INFO : LM_36488 [Mon Apr 03 15:10:22 2006] : (3060|3180) Session task instance [s_m_jtx_hier_useCase1] : [DISP_20305 The [Preparer] DTM with process id [148] is running on node [garnet].
+: (Mon Apr 03 15:10:21 2006)]
+INFO : LM_36488 [Mon Apr 03 15:10:22 2006] : (3060|3180) Session task instance [s_m_jtx_hier_useCase1] : [PETL_24036 Beginning the prepare phase for the session.]
+INFO : LM_36488 [Mon Apr 03 15:10:22 2006] : (3060|3180) Session task instance [s_m_jtx_hier_useCase1] : [TM_6721 Started [Connect to Repository].]
+ERROR : LM_36568 [Mon Apr 03 15:10:22 2006] : (3060|3180) Session task instance [s_m_jtx_hier_useCase1] : WRT_8098 External loader error. Error executing external loader process:[No such file or directory] Errno = [2]
