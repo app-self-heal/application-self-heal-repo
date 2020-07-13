@@ -1,6 +1,7 @@
 import pandas as pd
 import utils.emailnotifier as emailer
 from .config.params import config as param
+import utils.self_heal_report as ruleset
 config = param()
 
 #Class to do a look up on the the rules table.
@@ -19,10 +20,13 @@ class check_rule_set:
         platform = pdata[['Platform']]
         pdata = pdata[['SelfHeal_Steps']]
         if pdata.empty :
-            print('No rules specifies for this ruleset')
             rule_flag = 'false'
             platform = 'NA'
             self_heal_step = 'Self Healing Action Not Specified'
+            ruleset.new_error_code(self.job_name, self.code)
+            emailer.new_error_mail(self.job_name, self.code, platform)
+            print('No rules specified for this, ruleset entry added to backend and Email sent')
+
         else:
             rule_flag = 'true'
             self_heal_step = pdata.iat[0,0]

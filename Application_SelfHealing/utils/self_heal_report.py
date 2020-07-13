@@ -20,3 +20,19 @@ def self_heal_report(platform, job, code, error_time, action_taken, self_heal_ti
                         'Failure_Date_Time': error_time,
                         'Action_Taken': action_taken,
                         'SelfHeal_Start_Date_Time': self_heal_time})
+
+def new_error_code(job, code):
+    with open(config['rule_set_file'], 'a', newline='') as csvfile:
+        fieldnames = ['Platform','JobName', 'ErrorCode','SelfHeal_Flag','SelfHeal_Steps']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+        Platform = 'Informatica'
+        Flag = 'No'
+        Step = 'Email Notification'
+
+        listtostr = ''.join([str(elem) for elem in code])
+        writer.writerow({'Platform': Platform,
+                        'JobName': job,
+                        'ErrorCode': listtostr,
+                        'SelfHeal_Flag': Flag,
+                        'SelfHeal_Steps': Step})
