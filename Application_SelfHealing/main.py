@@ -18,7 +18,7 @@ if __name__ == "__main__":
         termination_file_count = len(glob.glob1(log_directory,"*.termination"))
         logfile_count = len(glob.glob1(log_directory,"*.log"))
 
-        if (termination_file_count > 0 & logfile_count == 0):
+        if (termination_file_count > 0 and logfile_count == 0):
             polling_flag = 0
 
         for filename in os.listdir(log_directory):
@@ -38,7 +38,11 @@ if __name__ == "__main__":
                 logger.self_heal_report(ruleset_return['platform'],  val['job'], val['code'], val['error_time'], ruleset_return['action_taken'], SelfHeal_Start_Date_Time)
 
                 #Move the processed log-file to archive folder
-                os.rename(os.path.join(log_directory,filename), os.path.join(log_archive,filename))
+                time_stamp_suffix = datetime.datetime.now().strftime("%b-%d-%y-%H-%M-%S")
+                if os.path.isdir(log_archive) == False:
+                    os.mkdir(log_archive)
+                if os.path.isfile(os.path.join(log_archive,filename.split('.log')[0] + '.' + time_stamp_suffix + ".log")) == False:
+                    os.rename(os.path.join(log_directory,filename), os.path.join(log_archive,filename.split('.log')[0] + '.' + time_stamp_suffix + ".log"))
 
-            elif filename.endswith(".termination"):
+            elif filename.endswith(".termination") and polling_flag == 0:
                 os.remove(os.path.join(log_directory,filename))
