@@ -1,6 +1,7 @@
 import re
 import os
 from .config.params import config as param
+import utils.regExPatternGenerator as regExErrorCode
 config = param()
 
 class log_file_parser:
@@ -11,8 +12,7 @@ class log_file_parser:
     def log_file_parser_informatica(self):
         error_code_list = []
         log_file_path = os.path.join(config['log_file_path'],self.filename)
-
-        regex_error_codes = ['(ORA-(.*):)','(RR_(.*):)', '(WRT_(.*):)','(SIP-(.*):)'] # Can be put into a config file once the different Error Codes are identified
+        regex_error_codes = regExErrorCode.regEx_error_code_pattern_generator()
         regex_session_name = '(ERROR(.*))'
 
         with open(log_file_path, "r") as file:
